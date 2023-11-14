@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDH-08 Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="css.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+      <div class="container-fluid header" >
+        <div class="container d-flex justify-content-between">
+            <div class="img">
+                <img src="../img/logo.jpg" class="logo" alt="">
+            </div>
+            <div class="d-flex align-items-center justify-content-between chiu">
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm" >
+                    <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
+                </div>
+                <div class="all_phone">
+                    <div class="icon-phone">
+                        <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="phone">
+                        <p>
+                            Gọi nhanh<br>
+                            0888.425.100
+                        </p>
+                    </div>
+                </div>
+                <div class="user">
+                    <a href="#"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></a>
+                </div>
+    
+                <div class="cart">
+                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
+                </div>
+    
+
+            </div>
+        </div>
+      </div>
+        <div class="menu ">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house fa-xl"></i></a></li>
+                    <li><a href="#">Thương hiệu</a></li>
+                    <li><a href="#">Đồng hồ nam</a></li>
+                    <li><a href="#">Đồng hồ nữ</a></li>
+                    <li><a href="#">Đồng hồ đôi</a></li>
+                    <li><a href="#">Đồng hồ treo tường</a></li>
+                    <li><a href="#">Đồng hồ treo tường</a></li>
+                    <li><a href="#">Dây đồng hồ</a></li>
+                    <li><a href="#">Sửa đồng hồ</a></li>
+                </ul>
+            </nav>
+        </div>
+<br>
+    <div class="banneranh">
+        <img class="slide" src="/img/banner1.jpg" alt="Image 1">
+        <img class="slide" src="/img/banner2.jpg" alt="Image 2">
+      </div>
+
+    <div id="bannerchu">
+        <span>Chào bạn đến với DDH-08 Store!</span>
+    </div>
+
+
+    <div class="gallery">
+    
+
+        <div class="image-container1">
+          
+          <a href="#"><img class="image" src="/img/tintuc1.jpg" alt="Image 1"></a>
+          <a href="#"><img class="image" src="/img/tintuc2.jpg" alt="Image 2"></a>
+        </div>
+    
+        <div class="image-container2">
+          
+            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 3"></a>
+            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 4"></a>
+            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 5"></a>
+            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 6"></a>
+            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 7"></a>
+        </div>
+      </div>
+
+
+    <div id="bannerduoi">
+        <img id="currentImagee" src="/img/bannerduoi1.jpg" alt="Image 1">
+    </div>
+    <div class="thumbnail-container">
+        <button onclick="previousImage()">&#8249;</button>
+        <button onclick="changeImage(0)">1</button>
+        <button onclick="changeImage(1)">2</button>
+        <button onclick="changeImage(2)">3</button>
+        <button onclick="changeImage(3)">4</button>
+        <button onclick="changeImage(4)">5</button>
+        <button onclick="changeImage(5)">6</button>
+        <button onclick="changeImage(6)">7</button>
+        <button onclick="nextImage()">&#8250;</button>
+    </div>
+    <br>
+    <div class="container-fluid text-dhnam ">
+        <h3 class="p-3">ĐỒNG HỒ NAM</h3>
+    </div>
+    <br>
+    <div class="container d-flex ">
+        <div class="row justify-content-center py-2 my-2">
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                </a>
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center " >AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <div class="container d-flex ">
+        <div class="row justify-content-center py-2 my-2">
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                </a>
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center " >AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <div class="container d-flex ">
+        <div class="row justify-content-center py-2 my-2">
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                </a>
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center " >AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <div class="container d-flex ">
+        <div class="row justify-content-center py-2 my-2">
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                </a>
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center " >AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <div class="container d-flex ">
+        <div class="row justify-content-center py-2 my-2">
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                </a>
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center " >AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+            <div class="col-2 ">
+                <a href="#"><img src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
+
+                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <ul class="pagination justify-content-center">
+        <li><a href="#" data-page="first"><i class="fas fa-angle-double-left"></i></a></li>
+        <li><a href="#" data-page="1">1</a></li>
+        <li><a href="#" data-page="2">2</a></li>
+        <li><a href="#" data-page="3">3</a></li>
+        <li><a href="#" data-page="4">4</a></li>
+        <li><a href="#" data-page="last"><i class="fas fa-angle-double-right"></i></a></li>
+    </ul>
+      <div class="container">
+        <h4>Các hãng đồng hồ hot</h4>
+        <div class="row justify-content-between">
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg"  alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg"  alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+            <div class="col-2">
+                <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
+            </div>
+        </div>
+      </div>
+      <div class="xemthem container">
+        <h3 style="background-color: #cfcfcf;" class="p-3 my-3 ">TẤT CẢ NHỮNG ĐIỀU BẠN CẦN BIẾT VỀ CÁCH CHỌN ĐỒNG HỒ NAM</h3>
+        <p>Những chiếc đồng hồ đeo tay không chỉ để xem thời gian mà còn khẳng định phong cách và đẳng cấp của phái
+            mạnh. Đồng hồ nam mang lại sự khác biệt nhất là khi đặt vào tổng thể trang phục, nhưng không phải ai
+            cũng chọn được một chiếc đồng hồ phù hợp ở lần đầu tiên. Duy Anh Watch sẽ giúp bạn lựa chọn đồng hồ nam
+            đẹp và phù hợp với sở thích của từng người!</p>
+        <div id="more" style="display:none;">
+            <img src="img/banner1.jpg" width="100%">
+            <h2>1. Các thương hiệu đồng hồ nam nổi tiếng tại Việt Nam</h2>
+            <h3>1.1 Longines</h3>
+            <p>Không nhiều người biết rằng Longines là một trong những thương hiệu đồng hồ lâu đời nhất thế giới.
+                Với gần hai thế kỷ ra đời và phát triển, cái tên Longines có thể được xem như “lão làng” trong giới
+                chơi đồng hồ. Quy tụ tinh hoa hàng trăm năm chế tác cùng tinh thần thanh lịch bất biến với thời
+                gian, những chiếc đồng hồ Longines chính là vật sở hữu đáng giá nhờ độ tin cậy cao, đa dạng về kiểu
+                dáng và mẫu mã với thiết kế cổ điển, nhiều phiên bản dress watch lý tưởng.</p>
+            <img src="img/banner1.jpg" alt="" width="100%">
+            <p>Dù là đồng hồ unisex, đồng hồ nam hay nữ, Longines vẫn mang đến hàng loạt phiên bản nổi tiếng đáp ứng
+                nhiều thị hiếu khác nhau.</p>
+            <h3>1.2 Rolex</h3>
+            <p>Dù là người đam mê đồng hồ hay không, bạn sẽ khó có thể tìm thấy một người nào chưa từng nghe qua cái
+                tên Rolex trong đời. Vương miện Rolex là một trong những biểu tượng dễ nhận diện nhất trên thế giới.
+                Đeo đồng hồ Rolex không chỉ thể hiện địa vị mà còn cho phép bạn bước vào thế giới của những khả năng
+                không giới hạn. Đó là lý do tại sao Rolex sản xuất và bán khoảng một triệu chiếc đồng hồ nam cao cấp
+                mỗi năm.</p>
+            <img src="img/banner1.jpg" alt="" width="100%">
+            <h3>1.3 Tissot</h3>
+            <p>Được tạo ra vào năm 1853 tại Jura Thụy Sĩ, Tissot tự hào có truyền thống chế tác đồng hồ rất lâu đời.
+                Ngày nay thuộc sở hữu của Tập đoàn Swatch, đồng hồ Tissot liên tục đưa ra những mẫu đồng hồ chất
+                lượng cao với mức giá tương đối phải chăng. Họ cũng là một trong những thương hiệu thành công nhất
+                của Thụy Sĩ cung cấp những chiếc đồng hồ nam thời trang, phong cách.</p>
+            <img src="img/banner1.jpg" alt="" width="100%">
+            <h2>2. Tư vấn lựa chọn đồng hồ nam phù hợp</h2>
+            <p>Nếu bạn đang muốn mua một chiếc đồng hồ để đeo nhưng chưa biết nên lựa chọn như thế nào, từ việc cân
+                nhắc những ưu và nhược điểm của các loại đồng hồ khác nhau, đến các kiểu đồng hồ nam khác nhau… thì
+                bài viết này là dành cho bạn!</p>
+            <p>Hơn thế nữa việc trang bị cho mình những thông tin liên quan có thể đơn giản hóa quá trình mua hàng
+                và không bị lạc giữa hàng trăm loại đồng hồ khác nhau và để chắc chắn rằng bạn không mua một chiếc
+                đồng hồ yêu thích hôm nay để rồi chán nó vào ngày mai!</p>
+            <q>Bạn sẽ tìm thấy hướng dẫn cơ bản về đồng hồ đeo tay nam - tất cả thông tin cần thiết để lựa chọn được
+                những mẫu đồng hồ nam đẹp và phù hợp với từng người.</q>
+            <h3>2.1 Chọn đồng hồ nam theo thương hiệu</h3>
+            <p>Thế giới đồng hồ nam rất đa dạng và phong phú với sự góp mặt của các thương hiệu đồng hồ Thụy Sĩ và
+                Nhật Bản – 2 cường quốc về sản xuất đồng hồ hàng đầu thế giới. Ở các shop đồng hồ nam, họ thường
+                chia các mẫu đồng hồ theo thương hiệu. Thông thường những thương hiệu phân khúc cao cấp nhất như
+                Rolex, Omega, Patek Philippe, Grand Seiko… sẽ có giá đến hàng trăm triệu. Các mẫu đồng hồ thuộc
+                thương hiệu Longines – thương hiệu cao cấp của tập đoàn đồng hồ lớn nhất Thụy Sĩ Swatch có giá từ
+                vài chục đến vài trăm triệu tùy theo mẫu đồng hồ bạn chọn. Trong khi đó các thương hiệu tầm trung
+                như Tissot, Mido, Certina, Hamilton, Seiko… có mức giá từ vài triệu đến vài chục triệu. Ngoài ra nếu
+                bạn muốn một chiếc đồng hồ nam hàng hiệu với mức giá mềm thì có thể kể đến thương hiệu Seiko,
+                Citizen, Orient, Casio, Daniel wellington… chỉ từ 3 triệu trở lên.</p>
+            <h3>2.2 Chọn đồng hồ nam theo loại máy</h3>
+            <p>Biết được chuyển động của đồng hồ có thể rất cần thiết vì mức độ tin cậy có thể khác nhau giữa các bộ
+                chuyển động và các thương hiệu khác nhau có mức sai số khác nhau. Nếu bạn cần độ chính xác cao có
+                thể lựa chọn mua đồng hồ pin thạch anh do độ chính xác cao của chúng. Nếu bạn đang nghiêng về một
+                chiếc đồng hồ cơ, thì mức độ dung sai là điều bạn chắc chắn cần biết hoặc ít nhất là hỏi về nó để
+                bạn không bị thất vọng.</p>
+            <p>Một số thương hiệu đồng hồ sản xuất các bộ máy riêng của họ (in house), đây thường là các thương hiệu
+                cao cấp đi kèm với mức giá cao. Nếu bạn có đủ ngân sách và cần chính xác, tìm một thương hiệu đồng
+                hồ sản xuất các bộ máy của riêng mình.</p>
+            <h3>2.3 Chọn đồng hồ nam theo kích thước cổ tay</h3>
+            <p>Một trong những yếu tố cần cân nhắc khi chọn đồng hồ nam là chiếc đồng hồ có kích thước cân đối với
+                cổ tay và bàn tay của bạn. Nếu nó quá lớn so với cổ tay của bạn, nó sẽ nổi bật và trông sặc sỡ; quá
+                nhỏ và nó sẽ trông giống như bạn đang đeo một chiếc đồng hồ của phụ nữ.</p>
+            <p>Hãy nhớ rằng không có công thức hoàn hảo nào khi nói về kích thước một chiếc đồng hồ có thể vừa vặn
+                trên cổ tay của bạn. Do đó khi mua đồng hồ, bạn cần biết cách chọn đồng hồ phù hợp với cổ tay của
+                mình. </p>
+            <h2>3. Địa chỉ mua đồng hồ nam chính hãng uy tín</h2>
+            <p>Cuối cùng, lựa chọn một cửa hàng đồng hồ nam để mua chiếc đồng hồ ưng ý nhất cũng là vấn đề quan
+                trọng.</p>
+            <p>Duy Anh Watch là nhà phân phối được ủy quyền chính thức của các thương hiệu đồng hồ hàng đầu thế giới
+                của Thụy Sĩ: Longines, Tissot, Mido, Hamilton, Certina, Titoni, Frederique Constant… và các thương
+                hiệu đồng hồ Nhật Bản như Seiko, Citizen, Orient, Casio… Với hệ thống cửa hàng nằm ở những vị trí
+                đắc địa, cơ sở vật chất đẳng cấp cho phép khách hàng đánh giá cao trải nghiệm mua sắm đồng hồ đồng
+                thời được hưởng lợi từ dịch vụ chuyên nghiệp và xuất sắc.</p>
+            <p>Tất cả các sản phẩm hiện có trong hệ thống cửa hàng của chúng tôi đều được bảo hành chính hãng từ 1
+                đến 3 năm tùy theo mặt hàng và điều kiện riêng của thương hiệu. Bên cạnh đó bạn còn nhận được gói
+                bảo hành 5 năm cùng nhiều quyền lợi hấp dẫn tại Đồng hồ King clock.</p>
+        </div>
+        <center><button class="btn p-2 " style="background-color: #cfcfcf;" onclick="myFunction() " >Xem thêm</button></center>
+    </div> 
+    
+    <script>
+function myFunction() {
+  var x = document.querySelector("#more");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.querySelector(".btn").textContent = "Thu gọn";
+  } else {
+    x.style.display = "none";
+    document.querySelector(".btn").textContent = "Xem thêm";
+  }
+}
+
+    </script>
+    
+    <div class="container">
+        <div class="text row">
+          <hr class="line" />
+          <span class="content">VÌ SAO LẠI CHỌN CHÚNG TÔI</span>
+          <hr class="line" />
+        </div>
+        <div class="d-flex justify-content-between align-items-center vscct p-4 my-4 pt-3">
+          <div class="d-flex pt-3"><i class="fa-solid fa-medal pt-2 pr-2" style="color: #000000;"></i><p >100% HÀNG CHÍNH HÃNG</p></div>
+          <div class="d-flex pt-3"><i class="fa-solid fa-truck-fast pt-1 pr-2" style="color: #000000;"></i><p>MIỄN PHÍ VẬN CHUYỂN</p></div>
+          <div class="d-flex pt-3"><i class="fa-solid fa-shield-halved pt-1 pr-2" style="color: #000000;"></i><p>BẢO HÀNH 5 NĂM</p></div>
+          <div class="d-flex pt-3"><i class="fa-solid fa-7 pt-1 pr-2" style="color: #000000;"></i></i><p>ĐỔIHÀNG TRONG 7 NGÀY</p></div>
+    
+    
+        </div>
+        <div class="iframe">
+          <div class="d-flex text">
+            <h4 class="text-white bg-secondary p-2">Tin tức - Video</h4>
+          <hr class="line" />
+          </div>
+          <div class="iframe2">
+            <iframe src="tintuc.html" frameborder="0" width="60%" height="400px"></iframe>
+            <iframe width="40%" height="400px" src="https://www.youtube.com/embed/AAS_KH9ZphY" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+    
+        
+      </div>
+    
+    <div class="container-fluid email  d-flex mt-4 pl-5">
+      <div class="col-sm d-flex pt-4 pl-5 pb-4">
+        <div class="pl-5"><i class="fa-regular fa-clock  mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+        <div class="text-white">
+          <h5 class="">MUA HÀNG ONLINE</h5>
+          <p>Tất cả các ngày trong tuần</p>
+        </div>
+      </div>
+      <div class="col-sm d-flex pt-4 pl-5">
+        <div class="pl-5"><i class="fa-solid fa-phone mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+        <div class="text-white ">
+          <h5>HỖ TRỢ MUA HÀNG</h5>
+          <p>0965706764</p>
+        </div>
+      </div>
+      <div class="col-sm d-flex pt-4 pl-5">
+        <div class="pl-5"><i class="fa-solid fa-envelope mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+        <div class="text-white">
+          <h5>EMAIL</h5>
+          <p>productddh8@gmail.com</p>
+        </div>
+      </div>
+      
+    
+    </div>
+    <div class="container">
+    <div class="d-flex justify-content-between p-5">
+      <div class="footer">
+        <h4>VỀ DDH STORE</h4>
+        <a href="" class="">Giới thiệu về đồng hồ</a><br>
+        <a href="">Triết lí kinh doanh</a><br>
+        <a href="">Khách hàng nói gì về chúng tôi</a>
+    
+      </div>
+      <div class="footer">
+        <h4 class="">CHĂM SÓC KHÁCH HÀNG</h4>
+        <a href="">Hướng dân mua hàng</a><br>
+        <a href="">Chính sách đổi trả</a><br>
+        <a href="">Dịch vụ và sửa đồng hồ</a>
+    
+      </div>
+      <div class="footer">
+        <h4>TIỆN ÍCH</h4>
+        <a href="">Thanh toán</a><br>
+        <a href="">Mua hàng online</a>
+      </div>
+    </div>
+    
+    </div>
+    <div class="container-fluid">
+      <div class="footer2 row text">
+        <hr class="line">
+        <h4 class="pl-4 pr-4 pt-1 pb-1">HÀ NỘI</h4>
+        <hr class="line">
+      </div>
+    <div class="d-flex footer3">
+      <div class="footer3_1">
+        <h5>Trịnh Văn Bô - Hà Nội</h5>
+      <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+      <p>Điện thoại: 0965706764</p>
+      <p>email: productddh8@gmail.com</p>
+      </div>
+      <div class="footer3_1">
+        <h5>Trịnh Văn Bô - Hà Nội</h5>
+      <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+      <p>Điện thoại: 0965706764</p>
+      <p>email: productddh8@gmail.com</p>
+      </div>
+    </div>
+    </div>
+      
+</body>
+<script src="home.js"></script>
+</html>

@@ -639,3 +639,10 @@ h1 {
 .policy-text {
   font-size: 16px;
 }
+
+/* css button trang đăng ký */
+.btn:hover {
+  background-color: #fff; /* Màu nền trắng khi hover */
+  color: #000; /* Màu chữ đen khi hover */
+}
+

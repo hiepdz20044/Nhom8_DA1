@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
+    <!-- <link rel="stylesheet" href="css.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-wrap:nowrap;
+           
+            
+              
+        }
+
+        .cart-item {
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            width: 100px;
+            border: 1px solid #ccc;
+            padding: 20x;
+            margin: 10px;
+        }
+
+        .cart-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .cart-item h3 {
+            font-size: 20px;   
+            
+        }
+
+        .cart-item .price {
+            font-weight: bold;
+        }
+
+        .cart-item .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-item .quantity input {
+            width: 30px;
+            text-align: center;
+        }
+
+        .cart-item .quantity button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        .total-amount {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        .pice1{
+            text-align: center;
+            margin-left: 800px;
+            margin-top: -4%;
+            color: red;
+        }
+
+        .customer-info, .payment-method {
+            margin: 20px;
+        }
+        h2{
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 100%;
+            padding: 20px;
+            margin: 5px 0;
+        }
+
+        .payment-method label {
+            display: block;
+            margin: 10px 0; 
+        }
+        .complete-order{
+            height: 60px;
+        }
+
+        .complete-order {
+            display: block;
+            margin: 20px auto;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 15px;
+            margin-top: 10px; /* Thêm khoảng cách giữa flex-container và grid-container */
+        }
+
+        .grid-box {
+            box-sizing: border-box;
+            padding: 8px;
+            margin-bottom: 7px;
+            border-radius: 12px ;
+
+        }
+    .box-raido, .box-raido1{
+        border-radius: 15px;
+        height: 50px;
+    }
+    .add {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add select {
+    flex: 1;
+    margin-right: 40px; /* Khoảng cách giữa các ô */
+    height: 39px;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    
+    
+}
+hr{
+    background-color: black;
+}
+.add select:last-child {
+    margin-right: 40px;
+}
+.box1{
+    border-radius: 17px;
+    height: 50px;
+}
+textarea{
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.text2{
+    margin-top: 20px;
+    font-size: 15px;
+    color: black;
+}
+.text23{
+    margin-left: 700px;
+    font-size: 25px;
+    margin-bottom: 40px;
+    color:cadetblue; 
+    margin-top: -30px;
+    font-weight: bold;
+}
+.text33{
+    margin-left: 60px;
+    font-size: 25px;
+    color:blueviolet;
+    margin-top: -33px;
+    font-weight: bold;
+
+}
+#box44{
+    margin-left: 20px;
+}
+.text3333{
+    font-weight: bold;
+    font-size: 23px;
+}
+</style>
+</head>
+<body class="container">
+
+<div class="container-fluid header" >
+    <div class="container d-flex justify-content-between">
+        <div class="img">
+            <img src="img/logo.jpg" class="logo" alt="">
+        </div>
+        <div class="d-flex align-items-center justify-content-between chiu">
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm" >
+                <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
+            </div>
+            <div class="all_phone">
+                <div class="icon-phone">
+                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                </div>
+                <div class="phone">
+                    <p>
+                        Gọi nhanh<br>
+                        0888.425.100
+                    </p>
+                </div>
+            </div>
+            <div class="user">
+                <a href="#"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></a>
+            </div>
+
+            <div class="cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+  </div>
+    <div class="menu ">
+        <nav>
+            <ul>
+                <li><a href="home.html"><i class="fa-solid fa-house fa-xl"></i></a></li>
+                <li><a href="#">Thương hiệu</a></li>
+                <li><a href="#">Đồng hồ nam</a></li>
+                <li><a href="#">Đồng hồ nữ</a></li>
+                <li><a href="#">Đồng hồ đôi</a></li>
+                <li><a href="#">Đồng hồ treo tường</a></li>
+                <li><a href="#">Đồng hồ treo tường</a></li>
+                <li><a href="#">Dây đồng hồ</a></li>
+                <li><a href="#">Sửa đồng hồ</a></li>
+            </ul>
+        </nav>
+    </div>
+<br>
+
+    <div class="">
+        <a class="btn btn-outline-secondary mt-2" onclick="plusSlides(-1)" id="box44">&#10094;</a>
+        <h3 class="text33">Mua Thêm Sản Phẩm Khác</h3>
+    </div>
+    <div class="">
+        <h1 class="text23">Giỏ Hàng Của Bạn:</h1>
+    </div>
+    <div>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex ">
+                <span style="font-size: 1.5rem; cursor: pointer;" onclick="closeImage()"class ="">✖</span>
+                <img src="img/donghodoi2.webp" width="200px" alt="">
+                <h3 class="text3333"> TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h3>
+            </div>
+            <div class="">
+                <h3 class="justify-content-center d-flex" style="color: red;">6.000.000đ</h3>
+                <div class=" ">
+                    <div class="container mt-5">
+                        <div class="input-group justify-content-center d-flex">
+                          <span class="input-group-btn ">
+                            <button type="button" class="btn btn-outline-secondary mt-2" onclick="decrement()">-</button>
+                          </span>
+                          <input type="text" id="quantity" class="form-control text-center col-3 mx-3 " value="1">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-outline-secondary mt-2" onclick="increment()">+</button>
+                          </span>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex ">
+                    <span style="font-size: 1.5rem; cursor: pointer;" onclick="closeImage()"class ="">✖</span>
+                    <img src="img/doi5.webp" width="180px" alt="">
+                    <h3 class="text3333"> TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h3> 
+                </div>
+                <div class="">
+                    <h3 class="justify-content-center d-flex" style="color: red;">3.000.000 đ</h3>
+                    <div class=" ">
+                        <div class="container mt-5">
+                            <div class="input-group justify-content-center d-flex">
+                              <span class="input-group-btn ">
+                                <button type="button" class="btn btn-outline-secondary mt-2" onclick="decrement()">-</button>
+                              </span>
+                              <input type="text" id="quantity" class="form-control text-center col-3 mx-3 " value="1">
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-outline-secondary mt-2" onclick="increment()">+</button>
+                              </span>
+                            </div>
+                          </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="total-amount">
+        <h2>Tổng tiền tạm thu:</h2>
+        <h2 class="pice1"> 9.000.000đ</h2>
+    </div>
+<hr>
+
+    <div class="customer-info">
+        <h2>Thông Tin Người Nhận Hàng:</h2>
+        <div class="grid-container">
+            <div class="grid-box">
+                <input type="text" placeholder="Họ và tên" class="box-raido ">
+            </div>
+            <div class="grid-box">
+                <input type="tel" placeholder="Số điện thoại" class="box-raido1">
+            </div>
+        </div>
+        <input type="email" placeholder="Email" class="box-raido1">
+   
+        <div class="text2">
+            <h2>Để được phục vụ nhanh hơn hãy chọn địa chỉ giao hàng:<h2>
+     </div>
+     
+     
+     
+<div class="add">
+     <select name="diachi" id="">
+        <option value="thanhpho">TP.Hà Nội</option>
+        <option value="thanhpho">Hồ Chí Minh</option>
+        <option value="thanhpho">Hải Phòng</option>
+     </select>
+     <select name="diachi" id="">
+        <option value="huyen">Chọn huyện</option>
+        <option value="huyen">Ba Vì</option>
+        <option value="huyen">Sơn Tây</option>
+        <option value="huyen">Hoài Đức</option>
+     </select>
+     <select name="diachi" id="">
+        <option value="xa">Chọn xã phường</option>
+        <option value="xa">Phú Sơn</option>
+        <option value="xa">Đồng Thái</option>
+        <option value="xa">Tây Đằng</option>
+     </select>
+
+</div>
+    
+        <input type="text" placeholder="Số nhà" class="box1">
+        <textarea placeholder="Ghi chú"></textarea>
+    </div>
+    <div class="total-amount">
+        <h2>Cần thanh toán:</h2>
+        <h2 class="pice1"> 9.000.000đ</h2>
+    </div>
+    <hr>
+    <div class="payment-method">
+        <h2>Phương thức thanh toán</h2>
+        <label>
+            <input type="radio" name="payment" value="cash-on-delivery"> Thanh toán khi nhận hàng
+        </label>
+    </div>
+    <button class="complete-order">Hoàn tất đơn hàng</button>
+
+
+    <div class="container-fluid email  d-flex mt-4 pl-5">
+        <div class="col-sm d-flex pt-4 pl-5 pb-4">
+          <div class="pl-5"><i class="fa-regular fa-clock  mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+          <div class="text-white">
+            <h5 class="">MUA HÀNG ONLINE</h5>
+            <p>Tất cả các ngày trong tuần</p>
+          </div>
+        </div>
+        <div class="col-sm d-flex pt-4 pl-5">
+          <div class="pl-5"><i class="fa-solid fa-phone mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+          <div class="text-white ">
+            <h5>HỖ TRỢ MUA HÀNG</h5>
+            <p>0965706764</p>
+          </div>
+        </div>
+        <div class="col-sm d-flex pt-4 pl-5">
+          <div class="pl-5"><i class="fa-solid fa-envelope mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+          <div class="text-white">
+            <h5>EMAIL</h5>
+            <p>productddh8@gmail.com</p>
+          </div>
+        </div>
+        
+      
+      </div>
+      <div class="container">
+      <div class="d-flex justify-content-between p-5">
+        <div class="footer">
+          <h4>VỀ DDH STORE</h4>
+          <a href="" class="">Giới thiệu về đồng hồ</a><br>
+          <a href="">Triết lí kinh doanh</a><br>
+          <a href="">Khách hàng nói gì về chúng tôi</a>
+      
+        </div>
+        <div class="footer">
+          <h4 class="">CHĂM SÓC KHÁCH HÀNG</h4>
+          <a href="">Hướng dân mua hàng</a><br>
+          <a href="">Chính sách đổi trả</a><br>
+          <a href="">Dịch vụ và sửa đồng hồ</a>
+      
+        </div>
+        <div class="footer">
+          <h4>TIỆN ÍCH</h4>
+          <a href="">Thanh toán</a><br>
+          <a href="">Mua hàng online</a>
+        </div>
+      </div>
+      
+      </div>
+      <div class="container-fluid">
+        <div class="footer2 row text">
+          <hr class="line">
+          <h4 class="pl-4 pr-4 pt-1 pb-1">HÀ NỘI</h4>
+          <hr class="line">
+        </div>
+      <div class="d-flex footer3">
+        <div class="footer3_1">
+          <h5>Trịnh Văn Bô - Hà Nội</h5>
+        <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+        <p>Điện thoại: 0965706764</p>
+        <p>email: productddh8@gmail.com</p>
+        </div>
+        <div class="footer3_1">
+          <h5>Trịnh Văn Bô - Hà Nội</h5>
+        <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+        <p>Điện thoại: 0965706764</p>
+        <p>email: productddh8@gmail.com</p>
+        </div>
+      </div>
+      </div>
+        
+
+<script>
+  function increment() {
+    var quantityInput = document.getElementById('quantity');
+    var quantity = parseInt(quantityInput.value, 10);
+    quantityInput.value = quantity + 1;
+  }
+
+  function decrement() {
+    var quantityInput = document.getElementById('quantity');
+    var quantity = parseInt(quantityInput.value, 10);
+    if (quantity > 1) {
+      quantityInput.value = quantity - 1;
+    }
+  }
+</script>
+
+</body>
+</html>
+
+    </div>
+  
+</body>
+</html>

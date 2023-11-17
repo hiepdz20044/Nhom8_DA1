@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Thương Hiệu Đồng Hồ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+</head>
+<style>
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  body,
+  input,
+  button,
+  textarea,
+  select {
+    outline: none;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+  }
+  input {
+    line-height: normal;
+  }
+  button {
+    cursor: pointer;
+  }
+  body {
+    padding: 20px;
+  }
+  .image-slider {
+    padding-bottom: 50px;
+  }
+  .image {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .image-title {
+    font-size: 20px;
+    color: #8e8fb5;
+  }
+  .slick-initialized .slick-slide {
+    margin: 0 10px;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 5;
+    transition: all 0.2s linear;
+  }
+  .slick-arrow:hover {
+    background-color: #2cccff;
+    color: white;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+  }
+  .slick-dots button {
+    font-size: 0;
+    width: 70px;
+    height: 20px;
+    border-radius: 100rem;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+  }
+  .slick-dots .slick-active button {
+    background-color: #2cccff;
+  }
+  h2{
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-left: -750px;
+    margin-bottom: 70px;
+  
+  }
+  
+  </style>
+<body>
+  <div class="container-fluid header" >
+    <div class="container d-flex justify-content-between">
+        <div class="img">
+            <img src="img/logo.jpg" class="logo" alt="">
+        </div>
+        <div class="d-flex align-items-center justify-content-between chiu">
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm" >
+                <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
+            </div>
+            <div class="all_phone">
+                <div class="icon-phone">
+                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+                </div>
+                <div class="phone">
+                    <p>
+                        Gọi nhanh<br>
+                        0888.425.100
+                    </p>
+                </div>
+            </div>
+            <div class="user">
+                <a href="#"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></a>
+            </div>
+
+            <div class="cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+  </div>
+    <div class="menu ">
+        <nav>
+            <ul>
+                <li><a href="home.html"><i class="fa-solid fa-house fa-xl"></i></a></li>
+                <li><a href="#">Thương hiệu</a></li>
+                <li><a href="#">Đồng hồ nam</a></li>
+                <li><a href="#">Đồng hồ nữ</a></li>
+                <li><a href="#">Đồng hồ đôi</a></li>
+                <li><a href="#">Đồng hồ treo tường</a></li>
+                <li><a href="#">Đồng hồ treo tường</a></li>
+                <li><a href="#">Dây đồng hồ</a></li>
+                <li><a href="#">Sửa đồng hồ</a></li>
+            </ul>
+        </nav>
+    </div>
+<br>
+
+
+
+
+
+
+
+  <div class="image-slider">
+    <div class="image-item">
+      <div class="image">
+        <img
+          src="img/doi4.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="image-item">
+      <div class="image">
+        <img
+          src="img/donghodoi3.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="image-item">
+      <div class="image">
+        <img
+          src="img/doi7.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="image-item">
+      <div class="image">
+        <img
+          src="img/donghonu5.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="image-item">
+      <div class="image">
+        <img
+          src="img/donghonu7.webp"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Tất Cả Thương Hiệu: </h2>
+                <div class="container">
+                
+                    <div class="row justify-content-center">
+
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 1">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 2">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 3">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 5">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                
+                    <div class="row justify-content-center">
+
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 1">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 2">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 3">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 5">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                
+                    <div class="row justify-content-center">
+
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 1">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 2">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 3">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 5">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                
+                    <div class="row justify-content-center">
+
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 1">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 2">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 3">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 5">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                
+                    <div class="row justify-content-center">
+
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 1">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 2">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 3">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card">
+                          <img src="img/logo.jpg" class="card-img-top" alt="Sản phẩm 5">
+                          <div class="card-body">
+                            <h6 class="card-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+        <div class="container-fluid email  d-flex mt-4 pl-5">
+          <div class="col-sm d-flex pt-4 pl-5 pb-4">
+            <div class="pl-5"><i class="fa-regular fa-clock  mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+            <div class="text-white">
+              <h5 class="">MUA HÀNG ONLINE</h5>
+              <p>Tất cả các ngày trong tuần</p>
+            </div>
+          </div>
+          <div class="col-sm d-flex pt-4 pl-5">
+            <div class="pl-5"><i class="fa-solid fa-phone mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+            <div class="text-white ">
+              <h5>HỖ TRỢ MUA HÀNG</h5>
+              <p>0965706764</p>
+            </div>
+          </div>
+          <div class="col-sm d-flex pt-4 pl-5">
+            <div class="pl-5"><i class="fa-solid fa-envelope mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
+            <div class="text-white">
+              <h5>EMAIL</h5>
+              <p>productddh8@gmail.com</p>
+            </div>
+          </div>
+          
+        
+        </div>
+        <div class="container">
+        <div class="d-flex justify-content-between p-5">
+          <div class="footer">
+            <h4>VỀ DDH STORE</h4>
+            <a href="" class="">Giới thiệu về đồng hồ</a><br>
+            <a href="">Triết lí kinh doanh</a><br>
+            <a href="">Khách hàng nói gì về chúng tôi</a>
+        
+          </div>
+          <div class="footer">
+            <h4 class="">CHĂM SÓC KHÁCH HÀNG</h4>
+            <a href="">Hướng dân mua hàng</a><br>
+            <a href="">Chính sách đổi trả</a><br>
+            <a href="">Dịch vụ và sửa đồng hồ</a>
+        
+          </div>
+          <div class="footer">
+            <h4>TIỆN ÍCH</h4>
+            <a href="">Thanh toán</a><br>
+            <a href="">Mua hàng online</a>
+          </div>
+        </div>
+        
+        </div>
+        <div class="container-fluid">
+          <div class="footer2 row text">
+            <hr class="line">
+            <h4 class="pl-4 pr-4 pt-1 pb-1">HÀ NỘI</h4>
+            <hr class="line">
+          </div>
+        <div class="d-flex footer3">
+          <div class="footer3_1">
+            <h5>Trịnh Văn Bô - Hà Nội</h5>
+          <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+          <p>Điện thoại: 0965706764</p>
+          <p>email: productddh8@gmail.com</p>
+          </div>
+          <div class="footer3_1">
+            <h5>Trịnh Văn Bô - Hà Nội</h5>
+          <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
+          <p>Điện thoại: 0965706764</p>
+          <p>email: productddh8@gmail.com</p>
+          </div>
+        </div>
+        </div>
+          
+    </body>
+        <script
+                           type="text/javascript"
+                           src="https://code.jquery.com/jquery-1.11.0.min.js"
+                        ></script>
+                        <script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+                         ></script>
+                         <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+                          ></script>
+                <script>
+                          $(document).ready(function () {
+                           $(".image-slider").slick({
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                             infinite: true,
+                              arrows: true,
+                                draggable: false,
+                               prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+                               nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+                               dots: true,
+                               responsive: [
+                         {
+                          breakpoint: 1025,
+                           settings: {
+                            slidesToShow: 3,
+                            },
+                          },
+                        {
+                      breakpoint: 480,
+                    settings: {
+                    slidesToShow: 1,
+                     arrows: false,
+                    infinite: false,
+    },
+  },
+],
+});
+});
+</script>
+</body>
+</html>

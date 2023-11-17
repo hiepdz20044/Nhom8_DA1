@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang Chủ Bán Đồng Hồ</title>
+        <link rel="stylesheet" href="css.css">
+        
+        
+</head>
+<style>
+            
+    body {
+     font-family: Arial, sans-serif;
+     background-color: #f0f0f0;
+     margin: 0;
+     padding: 0;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ h1, h2 {
+     text-align: center;
+ }
+
+ .row {
+     margin-bottom: 20px;
+ }
+
+ .col {
+     text-align: center;
+ }
+
+ .btn-primary {
+     background-color: red;
+     color: #fff;
+     border: none;
+     padding: 5px 15px;
+     margin: 5px;
+     cursor: pointer;
+ }
+
+ .product-list {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+
+ .product-item {
+     width: 300px;
+     margin: 15px;
+     padding: 10px;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     text-align: center;
+ }
+
+ .product-item img {
+     width: 100%;
+     border-radius: 5px;
+     transition: transform 0.3s;
+ }
+
+ .product-item:hover img {
+     transform: scale(1.1);
+ }
+
+ .load-more {
+     text-align: center;
+     margin-top: 20px;
+ }
+ .dat{
+    display: flex;
+    /* justify-content: space-between; */
+ }
+</style>
+<body>
+    <div class="container mt-4">
+        <h1>Trang Chủ Bán Đồng Hồ</h1>
+    </div>
+    
+            <div class="ban-chay-nhat">       
+                <h2>BÁN CHẠY NHẤT</h2>
+                <div class="ban-chay-nhat">
+                <button onclick="showProducts('ban-chay-nhat', 'nam')">Đồng Hồ Nam</button>
+                <button onclick="showProducts('ban-chay-nhat', 'nu')">Đồng Hồ Nữ</button>
+                <button onclick="showProducts('ban-chay-nhat', 'dong-ho-doi')">Đồng Hồ Đôi</button>
+    
+                <div id="ban-chay-nhat-nam-products" class="product-list">
+                    <div class="product-item">
+                        <img src="img/donghonu6.webp" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle1</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/doi6.webp" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle2</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle3</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle4</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    </div>
+    
+                <div id="ban-chay-nhat-nu-products" class="product-list">
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141017.png" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle1</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141029.png" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle2</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle3</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle4</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    </div>
+    
+                <div id="ban-chay-nhat-dong-ho-doi-products" class="product-list">
+                    <div class="product-item">
+                        <img src="img/donghonu3.webp" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/donghonu6.webp" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle8</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle9</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle9</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    </div>
+                    <button onclick="showMoreProducts('ban-chay-nhat')">Xem Thêm</button>
+            </div>
+    </div>
+        </div>
+    </div>
+    
+    
+            <div class="san-pham-moi">
+                <h2>SẢN PHẨM MỚI</h2>
+                <button onclick="showProducts('san-pham-moi', 'nam')">Đồng Hồ Nam</button>
+                <button onclick="showProducts('san-pham-moi', 'nu')">Đồng Hồ Nữ</button>
+                <button onclick="showProducts('san-pham-moi', 'dong-ho-doi')">Đồng Hồ Đôi</button>
+    
+                <div id="san-pham-moi-nam-products" class="product-list" style="display: block;">
+                    <div class="product-item">
+                        <img src="img/donghodoi2.webp" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle11</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141029.png" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle12</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle14</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle12</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle12</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                </div>
+    
+                <div id="san-pham-moi-nu-products" class="product-list">
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141017.png" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle1</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141029.png" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle2</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle3</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle12</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle4</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle5</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle6</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle7</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle10</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                </div>
+    
+                <div id="san-pham-moi-dong-ho-doi-products" class="product-list">
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141017.png" alt="Đồng Hồ Nam 1">
+                         <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141029.png" alt="Đồng Hồ Nam 2">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 141038.png" alt="Đồng Hồ Nam 3">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src=" img/Screenshot 2023-11-03 141104.png" alt="Đồng Hồ Nam 4"><br>
+                         <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143458.png" alt="Đồng Hồ Nam 5">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143525.png" alt="Đồng Hồ Nam 6">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143534.png" alt="Đồng Hồ Nam 7">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                        <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 8">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/Screenshot 2023-11-03 143554.png" alt="Đồng Hồ Nam 9">
+                        <p>Đồng hồ nam Tissot Le Locle</p>
+                         <h3> T006.407.22.036.00</h3>
+                         <p>AUTOMATIC|39.3MM</p>
+                         <p>Giá KM: 22.995.000₫</p>
+                    </div>
+                </div>
+                <button onclick="showMoreProducts('san-pham-moi')">Xem Thêm</button>
+            </div>
+        </header>
+        <script>
+            function showProducts(section, category) {
+                // Ẩn tất cả các danh sách sản phẩm
+                document.querySelectorAll(".product-list").forEach(function (list) {
+                    list.style.display = "flex";
+                });
+        
+                // Hiển thị danh sách sản phẩm tương ứng
+                var selectedCategory = document.getElementById(section + '-' + category + "-products");
+                if (selectedCategory) {
+                    selectedCategory.style.display = "none";
+                }
+            }
+        
+            function addClickEvent(elementId, section, category) {
+                document.getElementById(elementId).addEventListener('click', function () {
+                    showProducts(section, category);
+                });
+            }
+        
+            // Thêm chức năng cho ĐỒNG HỒ NỮ của SẢN PHẨM MỚI và BÁN CHẠY NHẤT
+            addClickEvent('san-pham-moi-dong-ho-nu', 'san-pham-moi', 'dong-ho-nu');
+            addClickEvent('ban-chay-nhat-dong-ho-nu', 'ban-chay-nhat', 'dong-ho-nu');
+        
+            // Thêm chức năng cho ĐỒNG HỒ ĐÔI của SẢN PHẨM MỚI và BÁN CHẠY NHẤT
+            addClickEvent('san-pham-moi-dong-ho-doi', 'san-pham-moi', 'dong-ho-doi');
+            addClickEvent('ban-chay-nhat-dong-ho-doi', 'ban-chay-nhat', 'dong-ho-doi');
+        </script>
+        
+        
+        
+
+        
+</body>
+</html>

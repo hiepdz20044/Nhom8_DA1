@@ -639,6 +639,9 @@ h1 {
 .policy-text {
   font-size: 16px;
 }
-.kh {
-  background-color: #cfcfcf;
+
+/* css button trang đăng ký */
+.btn:hover {
+  background-color: #fff; /* Màu nền trắng khi hover */
+  color: #000; /* Màu chữ đen khi hover */
 }

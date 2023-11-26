@@ -14,7 +14,19 @@
       }
 
       .card-title {
-        color: #007bff;
+        color: #c0902f;
+      }
+      .text-hover{
+        color: #c0902f;
+        display: inline-block;
+        position: relative;
+        text-align: center  ;
+        text-decoration: none; /* Loại bỏ gạch chân mặc định */
+        transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu chữ */
+      }
+      .text-hover:hover{
+        text-decoration: none;
+        color: #ff9500; /* Màu chữ khi di chuột vào */
       }
 
       .card-text {
@@ -97,7 +109,7 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
-              <h2 class="card-title mb-4">Thông tin thanh toán</h2>
+              <h1 class="card-title mb-4">Thông tin thanh toán</h2>
 
               <!-- Hiển thị danh sách sản phẩm -->
               <div class="row">
@@ -105,9 +117,9 @@
                     <div class="card">
                         <a href="#"><img class="card-img-top" src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
                         <div class="card-body">
-                            <a href="#"><h5 class="text-center m-1 card-title">Đồng hồ nam Citizen Quartz</h5></a>
+                            <a href="#"><h5  class="text-hover m-1">Đồng hồ nam Citizen Quartz</h5></a>
                             <p class="small text-center " >AUTOMATIC</p>
-                            <a href="trangchitiet.html"><h5 class="card-text">Giá: 6.456.000</h5></a>
+                            <a href="trangchitiet.html"><h5 class="text-hover">Giá: 6.456.000</h5></a>
                         </div>
                       </div>
                 </div>
@@ -116,9 +128,9 @@
                   <div class="card">
                     <a href="#"><img class="card-img-top" src="img/dhnam1.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/dhnam1.webp'">
                     <div class="card-body">
-                        <a href="#"><h5 class="text-center m-1 card-title">Đồng hồ nam Citizen Quartz</h5></a>
+                        <a href="#"><h5 class="text-hover m-1">Đồng hồ nam Citizen Quartz</h5></a>
                         <p class="small text-center " >AUTOMATIC</p>
-                        <a href="trangchitiet.html"><h5 class="card-text">Giá: 6.456.000</h5></a>
+                        <a href="trangchitiet.html"><h5 class="text-hover">Giá: 6.456.000</h5></a>
                     </div>
                   </div>
                 </div>
@@ -192,7 +204,7 @@
         </div>
       </div>
     </div>
-    <hr class="linee">
+    <hr class="line1">
     <div class="container">
         <div class="d-flex justify-content-between p-5">
           <div class="footer">

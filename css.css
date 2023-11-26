@@ -482,10 +482,6 @@ h1 {
   height: 1px;
   background-color: #907e5b;
 }
-.linee {
-  height: 1px;
-  background-color: #907e5b;
-}
 .content {
   font-size: 24px;
   font-family: serif;
@@ -777,11 +773,6 @@ body {
 }
 .roww {
   flex-direction: column-reverse;
-}
-.product-image {
-  height: 180px; /* Đặt chiều cao của ảnh */
-  object-fit: cover; /* Đảm bảo ảnh vừa với kích thước được thiết lập */
-  width: 100%; /* Chiều rộng 100% để ảnh điều chỉnh kích thước */
 }
 
 .total-price {

@@ -482,7 +482,10 @@ h1 {
   height: 1px;
   background-color: #907e5b;
 }
-
+.linee {
+  height: 1px;
+  background-color: #907e5b;
+}
 .content {
   font-size: 24px;
   font-family: serif;

@@ -1,89 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDH-08 Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="css.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-</head>
-<body>
-  <div class="container-fluid header" >
-    <div class="container d-flex justify-content-between">
-        <div class="img">
-            <img src="../img/logo.jpg" class="logo" alt="">
-        </div>
-        <div class="d-flex align-items-center justify-content-between chiu">
-            <div class="search">
-                <input type="text" placeholder="Tìm kiếm" >
-                <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
-            </div>
-            <div class="all_phone">
-                <div class="icon-phone">
-                    <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
-                </div>
-                <div class="phone">
-                    <p>
-                        Gọi nhanh<br>
-                        0888.425.100
-                    </p>
-                </div>
-            </div>
-            <div class="user">
-                <a href="dangnhap.html"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></a>
-            </div>
 
-            <div class="cart">
-                <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
-            </div>
-
-
-        </div>
-    </div>
-  </div>
-    <div class="menu ">
-        <nav>
-            <ul>
-                <li><a href="home.html"><i class="fa-solid fa-house fa-xl"></i></a></li>
-                <li><a href="#">Thương hiệu</a></li>
-                <li><a href="donghonam.html">Đồng hồ nam</a></li>
-                <li><a href="donghonu.html">Đồng hồ nữ</a></li>
-                <li><a href="donghodoi.html">Đồng hồ đôi</a></li>
-                <li><a href="donghotreotuong.html">Đồng hồ treo tường</a></li>
-                <li><a href="daydh.html">Dây đồng hồ</a></li>
-                <li><a href="trangbaohanh.html">Bảo hành</a></li>
-            </ul>
-        </nav>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img class="product-image" src="/img/sanpham1.webp" alt="Product Image">
+            <?php  
+            $img=$img_path.$img;
+            echo '
+                <img  class="product-image" src="view/user/asset/image/'.$trangCT['img'].'" alt="Product Image"> ';?>
                         <button class="btn btn-primary xem" onclick="openModal()"><i class="fa-solid fa-list fa-lg" style="color: #000000;"></i></button>
                         <button class="btn btn-primary xem2" data-toggle="modal" data-target="#imageModal"><i class="fa-solid fa-camera fa-xl" style="color: #000000;"></i></button>
+                        
             </div>
             <div class="col-md-6 product-info">
-                <h1 class="product-title">TISSOT GENTLEMAN POWERMATIC 80 SILICIUM T127.407.11.091.01</h1>
+              <form action="" method="POST">
+              <?php
+              // var_dump($trangCT);
+              echo'
+              
+                <h1 class="product-title">'.$trangCT['ten_sp'].'</h1>
                 <p class="product-description">Mã sản phẩm: T127.407.11.091.01</p>
-                <p class="product-description">Loại máy: Automatic (Máy cơ tự động)</p>
+                <p class="product-description">Loại máy: '.$trangCT['loai_may'].'</p>
                 <p class="product-description">Đường kính: 40mm</p>
-                <p class="product-price"><del>Giá: $99.99</del></p>
-                <p class="product-price text-danger">Giá: $88.88</p>
+                <p class="product-price text-danger">Giá: '.$trangCT['gia'].'</p>
                 <div class="form-group">
                   <label for="sizeSelect" class="sizeSelect">Chọn size:</label>
-                  <select class="custom-select" id="sizeSelect">
-                    <option>Size S</option>
-                    <option>Size M</option>
-                    <option>Size L</option>
-                    <option>Size XL</option>
-                  </select>
+                  <select class="custom-select" id="sizeSelect" name="size">';
+                    foreach ($loadall_sub_size as $key) {
+                        echo'<option value="'.$key['id_size'].'">'.$key['size'].'</option>';
+                    }
+                 echo '</select>
                 </div>
-                <button class="btn btn-primary add">Thêm vào giỏ hàng</button>
-                <button class="btn btn-primary buy">Mua ngay</button>
+                <input type="text" value="'.$trangCT['ten_sp'].'" name="tensp" hidden/>
+                <input type="number" value="'.$trangCT['gia'].'" name="gia" hidden/>
+                <input type="number" value="'.$trangCT['id_sanpham'].'" name="idsp" hidden/>
+                <input type="text" value="'.$trangCT['img'].'" name="img" hidden/>
+                <button data-id="'.$trangCT['id_sanpham'].'" class="btn btn-primary add" name="add-cart" onclick="addToCart('.$trangCT['id_sanpham'].',\''.$trangCT['ten_sp'].'\', '.$trangCT['gia'].')" type="submit">Thêm vào giỏ hàng</button>
+                ';
+                ?>
+                </form>
             </div>
         </div>
     </div>
@@ -455,12 +408,24 @@
     
       <!-- Sản phẩm liên quan -->
       <div class="container-fluid text-dhnam ">
-        <h3 class="p-3 ">ĐỒNG HỒ NAM</h3>
+        <h3 class="p-3 ">SẢN PHẨM LIÊN QUAN</h3>
       </div>
     <br>
       <div class="container d-flex ">
         <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
+          <?php
+              foreach ($spct as $key) {
+                echo '
+                <div class="col-2 ">
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="160" height="200" alt="Ảnh sản phẩm">
+                </a>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
+                <p class="small text-center">AUTOMATIC</p>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><h4 class="">Giá: '.$key['gia'].'</h4></a>
+            </div>';
+              }
+          ?>
+            <!-- <div class="col-2 ">
                 <a href="#"><img src="/img/sanpham1.webp" width="160" height="200" alt="Ảnh sản phẩm" onmouseover="this.src='/img/sanpham2.webp'" onmouseout="this.src='/img/sanpham1.webp'">
                 </a>
                 <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
@@ -496,7 +461,7 @@
                 <p class="small text-center">AUTOMATIC</p>
                 <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
 
-            </div>
+            </div> -->
 
         </div>
     
@@ -552,146 +517,52 @@
 
         <!-- Bình luận -->
     <div class="container">
-      <h1 class="text-bl">Bình luận</h1>
-  
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label">Tên:</label>
-          <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn">
-        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+    $("#binhluan").load("view/user/binhluanform.php", {idpro: <?=$id_sanpham?>});
+});
+
+
+
+
+
+
+
+
+// js của giỏ hàng
+let totalProduct = document.getElementById('totalProduct');
+    function addToCart(productId, productName, productPrice) {
+        // console.log(productId, productName, productPrice);
+        // Sử dụng jQuery
+        $.ajax({
+            type: 'POST',
+            // Đường dẫ tới tệp PHP xử lý dữ liệu
+            url: './view/user/addToCart.php',
+            data: {
+                id: productId,
+                name: productName,
+                price: productPrice
+            },
+            success: function(response) {
+                totalProduct.innerText = response;
+                alert('Bạn đã thêm sản phẩm vào giỏ hàng thành công!')
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
+      <h1 style="background-color: #c6c6c6;" id="binhluan">Bình luận</h1>
+      <!-- <form>
+        
         <div class="mb-3">
           <label for="comment" class="form-label">Bình luận:</label>
           <textarea class="form-control" id="comment" rows="3" placeholder="Nhập bình luận của bạn"></textarea>
         </div>
-        <div class="mb-3">
-          <label for="image" class="form-label">Ảnh:</label>
-          <input type="file" class="form-control" id="image">
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="sort" id="sortNewest" value="newest" checked>
-          <label class="form-check-label" for="sortNewest">
-            Sắp xếp mới nhất
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="sort" id="sortOldest" value="oldest">
-          <label class="form-check-label" for="sortOldest">
-            Sắp xếp cũ nhất
-          </label>
-        </div>
         <button type="submit" class="btn btn-primary bl">Gửi bình luận</button>
-      </form>
-  
-      <div id="commentList" class="mt-4">
-        <h3>Danh sách bình luận</h3>
-        <ul class="list-group" id="comments">
-          <!-- Đây là nơi để hiển thị các bình luận -->
-        </ul>
-        <p id="commentCount">Số bình luận: 0</p>
-      </div>
-    </div>
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-      </div>
-
-      <div class="container">
-        <div class="text row">
-          <hr class="line" />
-          <span class="content">VÌ SAO LẠI CHỌN CHÚNG TÔI</span>
-          <hr class="line" />
-        </div>
-        <div class="d-flex justify-content-between align-items-center vscct p-4 my-4 pt-3">
-          <div class="d-flex pt-3"><i class="fa-solid fa-medal pt-2 pr-2" style="color: #000000;"></i><p >100% HÀNG CHÍNH HÃNG</p></div>
-          <div class="d-flex pt-3"><i class="fa-solid fa-truck-fast pt-1 pr-2" style="color: #000000;"></i><p>MIỄN PHÍ VẬN CHUYỂN</p></div>
-          <div class="d-flex pt-3"><i class="fa-solid fa-shield-halved pt-1 pr-2" style="color: #000000;"></i><p>BẢO HÀNH 5 NĂM</p></div>
-          <div class="d-flex pt-3"><i class="fa-solid fa-7 pt-1 pr-2" style="color: #000000;"></i></i><p>ĐỔIHÀNG TRONG 7 NGÀY</p></div>
-    
-    
-        </div>
-        <div class="iframe">
-          <div class="d-flex text">
-            <h4 class="text-white bg-secondary p-2">Tin tức - Video</h4>
-          <hr class="line" />
-          </div>
-          <div class="iframe2">
-            <iframe src="tintuc.html" frameborder="0" width="60%" height="400px"></iframe>
-            <iframe width="40%" height="400px" src="https://www.youtube.com/embed/AAS_KH9ZphY" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </div>  
-      </div>
-      <div class="container-fluid email  d-flex mt-4 pl-5">
-        <div class="col-sm d-flex pt-4 pl-5 pb-4">
-          <div class="pl-5"><i class="fa-regular fa-clock  mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-          <div class="text-white">
-            <h5 class="">MUA HÀNG ONLINE</h5>
-            <p>Tất cả các ngày trong tuần</p>
-          </div>
-        </div>
-        <div class="col-sm d-flex pt-4 pl-5">
-          <div class="pl-5"><i class="fa-solid fa-phone mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-          <div class="text-white ">
-            <h5>HỖ TRỢ MUA HÀNG</h5>
-            <p>0965706764</p>
-          </div>
-        </div>
-        <div class="col-sm d-flex pt-4 pl-5">
-          <div class="pl-5"><i class="fa-solid fa-envelope mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-          <div class="text-white">
-            <h5>EMAIL</h5>
-            <p>productddh8@gmail.com</p>
-          </div>
-        </div>
-        
-      
-      </div>
-      <div class="container">
-      <div class="d-flex justify-content-between p-5">
-        <div class="footer">
-          <h4>VỀ DDH STORE</h4>
-          <a href="" class="">Giới thiệu về đồng hồ</a><br>
-          <a href="">Triết lí kinh doanh</a><br>
-          <a href="">Khách hàng nói gì về chúng tôi</a>
-      
-        </div>
-        <div class="footer">
-          <h4 class="">CHĂM SÓC KHÁCH HÀNG</h4>
-          <a href="">Hướng dân mua hàng</a><br>
-          <a href="">Chính sách đổi trả</a><br>
-          <a href="">Dịch vụ và sửa đồng hồ</a>
-      
-        </div>
-        <div class="footer">
-          <h4>TIỆN ÍCH</h4>
-          <a href="">Thanh toán</a><br>
-          <a href="">Mua hàng online</a>
-        </div>
-      </div>
-      
-      </div>
-      <div class="container-fluid">
-        <div class="footer2 row text">
-          <hr class="line">
-          <h4 class="pl-4 pr-4 pt-1 pb-1">HÀ NỘI</h4>
-          <hr class="line">
-        </div>
-      <div class="d-flex footer3">
-        <div class="footer3_1">
-          <h5>Trịnh Văn Bô - Hà Nội</h5>
-        <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
-        <p>Điện thoại: 0965706764</p>
-        <p>email: productddh8@gmail.com</p>
-        </div>
-        <div class="footer3_1">
-          <h5>Trịnh Văn Bô - Hà Nội</h5>
-        <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
-        <p>Điện thoại: 0965706764</p>
-        <p>email: productddh8@gmail.com</p>
-        </div>
-      </div>
-      </div>
-</html>
-<script src="/home.js"></script>
+      </form> -->
+<script src="view/user/asset/js/home.js"></script>

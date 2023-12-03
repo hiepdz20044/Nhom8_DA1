@@ -1,108 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDH-08 Store</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="css.css">
-</head>
-<body>
-      <div class="container-fluid header" >
-        <div class="container d-flex justify-content-between">
-            <div class="img">
-                <img src="../img/logo.jpg" class="logo" alt="">
-            </div>
-            <div class="d-flex align-items-center justify-content-between chiu">
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm" >
-                    <button><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></button>
-                </div>
-                <div class="all_phone">
-                    <div class="icon-phone">
-                        <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
-                    </div>
-                    <div class="phone">
-                        <p>
-                            Gọi nhanh<br>
-                            0888.425.100
-                        </p>
-                    </div>
-                </div>
-                <div class="user">
-                    <a href="dangnhap.html"><i class="fa-regular fa-user fa-xl" style="color: #ffffff;"></i></a>
-                </div>
-    
-                <div class="cart">
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i></a>
-                </div>
-    
 
-            </div>
-        </div>
-      </div>
-        <div class="menu ">
-            <nav>
-                <ul>
-                    <li><a href="home.html"><i class="fa-solid fa-house fa-xl"></i></a></li>
-                    <li><a href="#">Thương hiệu</a></li>
-                    <li><a href="donghonam.html">Đồng hồ nam</a></li>
-                    <li><a href="donghonu.html">Đồng hồ nữ</a></li>
-                    <li><a href="donghodoi.html">Đồng hồ đôi</a></li>
-                    <li><a href="donghotreotuong.html">Đồng hồ treo tường</a></li>
-                    <li><a href="daydh.html">Dây đồng hồ</a></li>
-                    <li><a href="trangbaohanh.html">Bảo hành</a></li>
-                </ul>
-            </nav>
-        </div>
-<br>
     <div class="banneranh">
-        <img class="slide" src="/img/banner1.jpg" alt="Image 1">
-        <img class="slide" src="/img/banner2.jpg" alt="Image 2">
+        <img class="slide" src="view/user/asset/image/banner1.jpg" alt="Image 1">
+        <img class="slide" src="view/user/asset/image/banner2.jpg" alt="Image 2">
       </div>
 
     <div id="bannerchu">
         <span>Chào bạn đến với DDH-08 Store!</span>
     </div>
 
-
-    <div class="gallery">
-    
-
-        <div class="image-container1">
-          
-          <a href="#"><img class="image" src="/img/tintuc1.jpg" alt="Image 1"></a>
-          <a href="#"><img class="image" src="/img/tintuc2.jpg" alt="Image 2"></a>
-        </div>
-    
-        <div class="image-container2">
-          
-            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 3"></a>
-            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 4"></a>
-            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 5"></a>
-            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 6"></a>
-            <a href="#"><img class="image" src="/img/thuonghieu1.jpg" alt="Image 7"></a>
-        </div>
-      </div>
-
-
-    <div id="bannerduoi">
-        <img id="currentImagee" src="/img/bannerduoi1.jpg" alt="Image 1">
-    </div>
-    <div class="thumbnail-container">
-        <button onclick="previousImage()">&#8249;</button>
-        <button onclick="changeImage(0)">1</button>
-        <button onclick="changeImage(1)">2</button>
-        <button onclick="changeImage(2)">3</button>
-        <button onclick="changeImage(3)">4</button>
-        <button onclick="changeImage(4)">5</button>
-        <button onclick="changeImage(5)">6</button>
-        <button onclick="changeImage(6)">7</button>
-        <button onclick="nextImage()">&#8250;</button>
-    </div>
     <br>
     <div class="container-fluid text-dhnam ">
         <h3 class="p-3">ĐỒNG HỒ NỮ</h3>
@@ -110,224 +15,32 @@
     <br>
     <div class="container d-flex ">
         <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
+         
+            
+            <?php
+                foreach ($loadall_daydh as $key) {
+                    echo '
+                    <div class="col-2 ">
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="100%" alt="Ảnh sản phẩm"
+                       >
                 </a>
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center " >AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'">
+                    <p class="text-center m-1">'.$key['ten_sp'].'</p>
+                </a>
+                <p class="small text-center">'.$key['loai_may'].'</p>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'">
+                    <h4 class="">Giá: '.$key['gia'].'</h4>
+                </a>
+            </div>';
+                }
+            ?>
 
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
 
         </div>
         
         
     </div>
-    <div class="container d-flex ">
-        <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                </a>
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center " >AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
 
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-
-        </div>
-        
-        
-    </div>
-    <div class="container d-flex ">
-        <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                </a>
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center " >AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-
-        </div>
-        
-        
-    </div>
-    <div class="container d-flex ">
-        <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                </a>
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center " >AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-
-        </div>
-        
-        
-    </div>
-    <div class="container d-flex ">
-        <div class="row justify-content-center py-2 my-2">
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                </a>
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center " >AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-            <div class="col-2 ">
-                <a href="#"><img src="img/daydh.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src='img/dhnam2.webp'" onmouseout="this.src='img/daydh.webp'">
-
-                <a href="#"><p  class="text-center m-1">Đồng hồ nam Citizen Quartz</p></a>
-                <p class="small text-center">AUTOMATIC</p>
-                <a href="#"><h4 class="">Giá: 6.456.000</h4></a>
-
-            </div>
-
-        </div>
-        
-        
-    </div>
     <ul class="pagination justify-content-center">
         <li><a href="#" data-page="first"><i class="fas fa-angle-double-left"></i></a></li>
         <li><a href="#" data-page="1">1</a></li>
@@ -336,7 +49,7 @@
         <li><a href="#" data-page="4">4</a></li>
         <li><a href="#" data-page="last"><i class="fas fa-angle-double-right"></i></a></li>
     </ul>
-      <div class="container">
+      <!-- <div class="container">
         <h4>Các hãng đồng hồ hot</h4>
         <div class="row justify-content-between">
             <div class="col-2">
@@ -372,10 +85,10 @@
                 <a href=""><img src="img/thuonghieu1.jpg" alt=""></a>
             </div>
         </div>
-      </div>
+      </div> -->
 
     
-    <div class="container">
+    <!-- <div class="container">
         <div class="text row">
           <hr class="line" />
           <span class="content">VÌ SAO LẠI CHỌN CHÚNG TÔI</span>
@@ -389,94 +102,7 @@
     
     
         </div>
-        <div class="iframe">
-          <div class="d-flex text">
-            <h4 class="text-white bg-secondary p-2">Tin tức - Video</h4>
-          <hr class="line" />
-          </div>
-          <div class="iframe2">
-            <iframe src="tintuc.html" frameborder="0" width="60%" height="400px"></iframe>
-            <iframe width="40%" height="400px" src="https://www.youtube.com/embed/AAS_KH9ZphY" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-    
+
         
       </div>
-    
-    <div class="container-fluid email  d-flex mt-4 pl-5">
-      <div class="col-sm d-flex pt-4 pl-5 pb-4">
-        <div class="pl-5"><i class="fa-regular fa-clock  mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-        <div class="text-white">
-          <h5 class="">MUA HÀNG ONLINE</h5>
-          <p>Tất cả các ngày trong tuần</p>
-        </div>
-      </div>
-      <div class="col-sm d-flex pt-4 pl-5">
-        <div class="pl-5"><i class="fa-solid fa-phone mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-        <div class="text-white ">
-          <h5>HỖ TRỢ MUA HÀNG</h5>
-          <p>0965706764</p>
-        </div>
-      </div>
-      <div class="col-sm d-flex pt-4 pl-5">
-        <div class="pl-5"><i class="fa-solid fa-envelope mr-3" style="color: #ffffff; font-size: 50px;"></i></div>
-        <div class="text-white">
-          <h5>EMAIL</h5>
-          <p>productddh8@gmail.com</p>
-        </div>
-      </div>
-      
-    
-    </div>
-    <div class="container">
-    <div class="d-flex justify-content-between p-5">
-      <div class="footer">
-        <h4>VỀ DDH STORE</h4>
-        <a href="" class="">Giới thiệu về đồng hồ</a><br>
-        <a href="">Triết lí kinh doanh</a><br>
-        <a href="">Khách hàng nói gì về chúng tôi</a>
-    
-      </div>
-      <div class="footer">
-        <h4 class="">CHĂM SÓC KHÁCH HÀNG</h4>
-        <a href="">Hướng dân mua hàng</a><br>
-        <a href="">Chính sách đổi trả</a><br>
-        <a href="">Dịch vụ và sửa đồng hồ</a>
-    
-      </div>
-      <div class="footer">
-        <h4>TIỆN ÍCH</h4>
-        <a href="">Thanh toán</a><br>
-        <a href="">Mua hàng online</a>
-      </div>
-    </div>
-    
-    </div>
-    <div class="container-fluid">
-      <div class="footer2 row text">
-        <hr class="line">
-        <h4 class="pl-4 pr-4 pt-1 pb-1">HÀ NỘI</h4>
-        <hr class="line">
-      </div>
-    <div class="d-flex footer3">
-      <div class="footer3_1">
-        <h5>Trịnh Văn Bô - Hà Nội</h5>
-      <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
-      <p>Điện thoại: 0965706764</p>
-      <p>email: productddh8@gmail.com</p>
-      </div>
-      <div class="footer3_1">
-        <h5>Trịnh Văn Bô - Hà Nội</h5>
-      <p>Địa chỉ: 22P.Trịnh Văn Bô, Xuân Phương, Nam từ liêm, Hà nội</p>
-      <p>Điện thoại: 0965706764</p>
-      <p>email: productddh8@gmail.com</p>
-      </div>
-    </div>
-    </div>
-      
-</body>
-<script src="home.js"></script>
-</html>
+     -->

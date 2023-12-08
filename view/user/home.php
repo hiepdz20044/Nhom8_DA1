@@ -45,7 +45,7 @@
     <h2 class="mt-5 text-center kh container p-2">ĐỒNG HỒ HOT</h2>
     <div class="container d-flex ">
         <div class="row justify-content-center py-2 my-2">
-            .
+            <p style="color: white;">p</p>
             <?php
             foreach ($loadall_sanpham_hot as $key) {
                 echo '
@@ -83,7 +83,8 @@
     <h2 class="kh container mt-5 text-center p-2">SẢN PHẨM MỚI</h2>
     <div class="container d-flex ">
         <div class="row justify-content-center py-2 my-2">
-            . <?php
+            <p style="color: white;">p</p>
+            <?php
             foreach ($loadall_sanpham_moi as $key) {
                 echo '
                 <div class="col-2 ">

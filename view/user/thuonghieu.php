@@ -134,51 +134,52 @@
         <?php }
         ?>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var startIndex = 0;
-        var endIndex = 3;
-        var totalImages = document.querySelectorAll(
-            "#imageRow .col-md-3"
-        ).length;
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var startIndex = 0;
+    var endIndex = 3;
+    var totalImages = document.querySelectorAll(
+        "#imageRow .col-md-3"
+    ).length;
 
-        function showImages(start) {
-            var images = document.querySelectorAll("#imageRow .col-md-3");
+    function showImages(start) {
+        var images = document.querySelectorAll("#imageRow .col-md-3");
 
-            // Ẩn tất cả ảnh
-            for (var i = 0; i < totalImages; i++) {
-                images[i].style.display = "none";
-            }
-
-            // Hiển thị 4 ảnh
-            for (var i = 0; i < 4; i++) {
-                var index = (start + i) % totalImages;
-                if (index < 0) {
-                    index += totalImages; // Xử lý khi index âm
-                }
-                images[index].style.display = "block";
-            }
+        // Ẩn tất cả ảnh
+        for (var i = 0; i < totalImages; i++) {
+            images[i].style.display = "none";
         }
 
-        document
-            .getElementById("nextBtn")
-            .addEventListener("click", function(event) {
-                event.preventDefault();
-                startIndex = (startIndex + 1) % totalImages;
-                showImages(startIndex);
-            });
+        // Hiển thị 4 ảnh
+        for (var i = 0; i < 4; i++) {
+            var index = (start + i) % totalImages;
+            if (index < 0) {
+                index += totalImages; // Xử lý khi index âm
+            }
+            images[index].style.display = "block";
+        }
+    }
 
-        document
-            .getElementById("prevBtn")
-            .addEventListener("click", function(event) {
-                event.preventDefault();
-                startIndex = (startIndex - 1 + totalImages) % totalImages;
-                showImages(startIndex);
-            });
-    });
-    </script>
+    document
+        .getElementById("nextBtn")
+        .addEventListener("click", function(event) {
+            event.preventDefault();
+            startIndex = (startIndex + 1) % totalImages;
+            showImages(startIndex);
+        });
+
+    document
+        .getElementById("prevBtn")
+        .addEventListener("click", function(event) {
+            event.preventDefault();
+            startIndex = (startIndex - 1 + totalImages) % totalImages;
+            showImages(startIndex);
+        });
+});
+</script>

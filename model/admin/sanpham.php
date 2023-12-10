@@ -68,67 +68,51 @@
             return "";
         }
     }
-    function loadall_donhang(){
-        $sql="SELECT donhang_chitiet.id_donhangct, donhang.ho_ten, sanpham.ten_sp, donhang_chitiet.so_luong, donhang_chitiet.tong_don, donhang.address
-        FROM donhang_chitiet
-        JOIN sanpham ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
-        JOIN donhang ON donhang_chitiet.id_donhang = donhang.id_donhang";
-        $listdonhang=pdo_query($sql);
-        return $listdonhang;
-    }
-    // function loadone_donhangct($id_donhangct){
+    // function loadall_donhang(){
     //     $sql="SELECT donhang_chitiet.id_donhangct, donhang.ho_ten, sanpham.ten_sp, donhang_chitiet.so_luong, donhang_chitiet.tong_don, donhang.address
     //     FROM donhang_chitiet
     //     JOIN sanpham ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
-    //     JOIN donhang ON donhang_chitiet.id_donhang = donhang.id_donhang where id_dm=".$id_donhangct;
-    //     $donhang=pdo_query_one($sql);
+    //     JOIN donhang ON donhang_chitiet.id_donhang = donhang.id_donhang";
+    //     $listdonhang=pdo_query($sql);
+    //     return $listdonhang;
+    // }
+    // function loadone_donhangct($id_donhangct){
+    //     $sql = "SELECT donhang_chitiet.id_donhangct, donhang.ho_ten, sanpham.ten_sp, donhang_chitiet.so_luong, donhang_chitiet.tong_don, donhang.address
+    //             FROM donhang_chitiet
+    //             JOIN sanpham ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
+    //             JOIN donhang ON donhang_chitiet.id_donhang = donhang.id_donhang 
+    //             WHERE donhang_chitiet.id_donhangct = ".$id_donhangct;
+    
+    //     $donhang = pdo_query_one($sql);
     //     return $donhang;
     // }
-    function loadone_donhangct($id_donhangct){
-        $sql = "SELECT donhang_chitiet.id_donhangct, donhang.ho_ten, sanpham.ten_sp, donhang_chitiet.so_luong, donhang_chitiet.tong_don, donhang.address
-                FROM donhang_chitiet
-                JOIN sanpham ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
-                JOIN donhang ON donhang_chitiet.id_donhang = donhang.id_donhang 
-                WHERE donhang_chitiet.id_donhangct = ".$id_donhangct;
+    // function updatedm_donhang($so_luong, $tong_don, $ho_ten, $ten_sp, $address, $id_donhangct) {
+    //     $sql = "UPDATE donhang_chitiet
+    //             JOIN donhang
+    //             ON donhang_chitiet.id_donhang = donhang.id_donhang
+    //             JOIN sanpham
+    //             ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
+    //             SET
+    //             donhang_chitiet.so_luong = '".$so_luong."',
+    //             donhang_chitiet.tong_don = '".$tong_don."',
+    //             donhang.ho_ten = '".$ho_ten."',
+    //             sanpham.ten_sp = '".$ten_sp."',
+    //             donhang.address = '".$address."'
+    //             WHERE donhang_chitiet.id_donhangct = ".$id_donhangct;
     
-        $donhang = pdo_query_one($sql);
-        return $donhang;
-    }
-    
-    // function updatedm_donhang($so_luong,$tong_don,$ho_ten,$ten_sp,$address,$id_donhangct,){
-    //     $sql="UPDATE donhang_chitiet
-    //     JOIN donhang
-    //     ON donhang_chitiet.id_donhang = donhang.id_donhang
-    //     JOIN sanpham
-    //     ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
-    //     SET
-    //     donhang_chitiet.so_luong ='".$so_luong."',
-    //     donhang_chitiet.tong_don ='".$tong_don."',
-    //     donhang.ho_ten ='".$ho_ten."',
-    //     sanpham.ten_sp = '".$ten_sp."',
-    //     donhang.address = '".$address."'
-    //     WHERE donhang.id_donhang = ;
-    //     ".$id_donhangct;
     //     pdo_execute($sql);
     // }
-    function updatedm_donhang($so_luong, $tong_don, $ho_ten, $ten_sp, $address, $id_donhangct) {
-        $sql = "UPDATE donhang_chitiet
-                JOIN donhang
-                ON donhang_chitiet.id_donhang = donhang.id_donhang
-                JOIN sanpham
-                ON donhang_chitiet.id_sanpham = sanpham.id_sanpham
-                SET
-                donhang_chitiet.so_luong = '".$so_luong."',
-                donhang_chitiet.tong_don = '".$tong_don."',
-                donhang.ho_ten = '".$ho_ten."',
-                sanpham.ten_sp = '".$ten_sp."',
-                donhang.address = '".$address."'
-                WHERE donhang_chitiet.id_donhangct = ".$id_donhangct;
-    
-        pdo_execute($sql);
-    }
-    function delete_donhang($id_donhangct){
-        $sql="delete from donhang_chitiet where id_donhangct=".$id_donhangct;
-        pdo_execute($sql);
+    // function delete_donhang($id_donhangct){
+    //     $sql="delete from donhang_chitiet where id_donhangct=".$id_donhangct;
+    //     pdo_execute($sql);
+    // }
+    function loadall_donhang(){
+        $sql="SELECT detail_orders.id_od, khach_hang.ho_ten, sanpham.ten_sp, detail_orders.quantity, detail_orders.total_price, khach_hang.dia_chi, detail_orders.status, detail_orders.day
+        FROM detail_orders
+        JOIN khach_hang ON detail_orders.id_user = khach_hang.id_khachhang
+        JOIN sanpham ON detail_orders.id_pro = sanpham.id_sanpham;
+        ";
+        $rs=pdo_query($sql);
+        return $rs;
     }
 ?>

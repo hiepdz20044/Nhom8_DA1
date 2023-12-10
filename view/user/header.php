@@ -53,9 +53,19 @@
                 </div>
 
                 <div class="cart">
-                    <a href="index.php?type=listCart"><i class="fa-solid fa-cart-shopping fa-xl"
+                    <?php
+                    if (!isset($_SESSION['sdt'])) {
+                        ?>
+                    <a href="index.php?type=dangnhap"><i class="fa-solid fa-cart-shopping fa-xl"
                             style="color: #ffffff;"></i></a>
-                    <span id="totalProduct"><?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?></span>
+
+                    <?php }elseif (isset($_SESSION['sdt'])){
+                        ?>
+                    <a href="index.php?type=giohang"><i class="fa-solid fa-cart-shopping fa-xl"
+                            style="color: #ffffff;"></i></a>
+                    <?php }
+                    ?>
+
                 </div>
 
 

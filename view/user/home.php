@@ -54,32 +54,13 @@
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
                 <p class="small text-center">'.$key['loai_may'].'</p>
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><h4 class="">Giá: '.$key['gia'].'</h4></a>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><h5 class="">Giá: '.$key['gia'].'.000</h5></a>
             </div>';
             }
             ?>
         </div>
-
-
     </div>
-    <!-- <div class="container d-flex ">
-    <div class="row justify-content-center py-2 my-2">
-    <?php
-        foreach ($loadall_sanpham_hot as $key) {
-            echo '
-            <div class="col-2 ">
-            <a href="index.php?type=trangchitiet"><img src="view/user/asset/image/'.$key['img'].'" width="100%" alt="Ảnh sản phẩm">
-            </a>
-            <a href="index.php?type=trangchitiet"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
-            <p class="small text-center">AUTOMATIC</p>
-            <a href="index.php?type=trangchitiet"><h4 class="">Giá: '.$key['gia'].'</h4></a>
-        </div>';
-        }
-        ?>
-    </div>
-    
-    
-</div> -->
+
     <h2 class="kh container mt-5 text-center p-2">SẢN PHẨM MỚI</h2>
     <div class="container d-flex ">
         <div class="row justify-content-center py-2 my-2">
@@ -92,33 +73,12 @@
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
                 <p class="small text-center">'.$key['loai_may'].'</p>
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><h4 class="">Giá: '.$key['gia'].'</h4></a>
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><h5 class="">Giá: '.$key['gia'].'.000</h5></a>
             </div>';
             }
             ?>
         </div>
-
     </div>
-
-    <!-- <div class="container d-flex ">
-    <div class="row justify-content-center py-2 my-2">
-    <?php
-        foreach ($loadall_sanpham_moi as $key) {
-            echo '
-            <div class="col-2 ">
-            <a href="index.php?type=trangchitiet&id='.$key['id_sanpham'].'"><img src="view/user/asset/image/dhnam2.webp" width="100%" alt="Ảnh sản phẩm" onmouseover="this.src=\'view/user/asset/image/dhnam2.webp\'" onmouseout="this.src=\'view/user/asset/image/dhnam1.webp\'">
-            </a>
-            <a href="index.php?type=trangchitiet&id='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
-            <p class="small text-center">AUTOMATIC</p>
-            <a href="index.php?type=trangchitiet&id='.$key['id_sanpham'].'"><h4 class="">Giá: '.$key['gia'].'</h4></a>
-        </div>';
-        }
-        ?>
-
-    </div>
-    
-    
-</div> -->
 
     <div class="container mt-4">
         <div class="text row">

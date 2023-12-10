@@ -143,39 +143,65 @@
                         include "taikhoan/list.php";
                         break; 
                         case 'dsdonhang':
-                            $listdonhang=loadall_donhang();
+                            
+                            $loadAll_dh=loadall_donhang();
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                // Kiểm tra xem có dữ liệu từ form không
+                                if(isset($_POST['status']) && is_array($_POST['status'])) {
+                                    $newStatusArray = $_POST['status'];
+                            
+                                    // Dùng vòng lặp để cập nhật trạng thái từ mảng $_POST
+                                    foreach ($newStatusArray as $index => $newStatus) {
+                                        // Lấy ID đơn hàng từ dữ liệu đơn hàng đã hiển thị
+                                        $orderId = $loadAll_dh[$index]['id_od'];
+                            
+                                        // Thực hiện câu lệnh UPDATE để cập nhật trạng thái
+                                        $updateQuery = "UPDATE detail_orders SET status = '$newStatus' WHERE id_od = $orderId";
+                            
+                                        // Thực hiện câu lệnh UPDATE (thực hiện kiểm tra lỗi trong ứng dụng thực tế)
+                                        // Đối với MySQLi
+                                        // $mysqli->query($updateQuery);
+                                        
+                                        // Đối với PDO
+                                        $rs=pdo_query_one($updateQuery);
+                                        return $rs;
+                                    }
+                            
+                                    // Sau khi cập nhật, bạn có thể chuyển hướng người dùng đến trang khác
+                                    header("Location: index.php?act=dsdonhang");
+                                    exit();
+                                }
+                            }
                             include "quanlydonhang/list.php";
-                            break;
-                    case 'suadonhang':
-                        if (isset($_GET['id_donhangct'])&&($_GET['id_donhangct']>0)) {
-                            $donhang=loadone_donhangct($_GET['id_donhangct']);
-                        }
+                            break;        
+                    // case 'suadonhang':
+                        
                                 
-                        include "quanlydonhang/update.php";
-                        break;
-                    case 'updatedonhang':
-                        if (isset($_POST['capnhat'])&&($_POST['capnhat'])){
-                            $name=$_POST['name'];
-                            $tensp=$_POST['tensp'];
-                            $soluong=$_POST['soluong'];
-                            $tongtien=$_POST['tongtien'];
-                            $diachi=$_POST['diachi'];
-                            $id_donhangct=$_POST['id_donhangct'];
-                            updatedm_donhang($soluong, $tongtien, $name, $tensp, $diachi, $id_donhangct);
-                            $thongbao="Cap nhat thanh cong";
-                        }
+                    //     include "quanlydonhang/update.php";
+                    //     break;
+                    // case 'updatedonhang':
+                    //     if (isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                    //         $name=$_POST['name'];
+                    //         $tensp=$_POST['tensp'];
+                    //         $soluong=$_POST['soluong'];
+                    //         $tongtien=$_POST['tongtien'];
+                    //         $diachi=$_POST['diachi'];
+                    //         $id_donhangct=$_POST['id_donhangct'];
+                    //         // updatedm_donhang($soluong, $tongtien, $name, $tensp, $diachi, $id_donhangct);
+                    //         $thongbao="Cap nhat thanh cong";
+                    //     }
             
-                        $listdonhang=loadall_donhang();
-                        include "quanlydonhang/list.php";
-                        break;
-                    case 'xoadonhang':
-                        if (isset($_GET['id_donhangct'])&&($_GET['id_donhangct']>0)) {
-                            delete_donhang($_GET['id_donhangct']);
-                        }
+                    //     // $listdonhang=loadall_donhang();
+                    //     include "quanlydonhang/list.php";
+                    //     break;
+                    // case 'xoadonhang':
+                    //     if (isset($_GET['id_donhangct'])&&($_GET['id_donhangct']>0)) {
+                    //         // delete_donhang($_GET['id_donhangct']);
+                    //     }
             
-                        $listdonhang=loadall_donhang();
-                        include "quanlydonhang/list.php";
-                        break;
+                    //     // $listdonhang=loadall_donhang();
+                    //     include "quanlydonhang/list.php";
+                    //     break;
                     case 'xoatk':
                         if (isset($_GET['id_khachhang'])&&($_GET['id_khachhang']>0)) {
                             delete_tk($_GET['id_khachhang']);

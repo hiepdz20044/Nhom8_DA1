@@ -10,6 +10,11 @@ include("view/user/header.php");
 include("global.php");
 include("./mail/index.php");
 include "model/user/thuonghieu.php";
+include "model/user/giohang.php";
+if (isset($_SESSION['sdt'])) {
+    $id_u = load_taikhoan($_SESSION['sdt']);
+    $id_user = $id_u['id_khachhang'];
+}
 $mail= new Mailer();
 if (isset($_GET["type"])){
     switch ($_GET["type"]) {
@@ -62,51 +67,65 @@ if (isset($_GET["type"])){
             include("view/user/donghotreotuong.php");
             break;
         case 'trangchitiet':
-            if(isset($_GET['id_sp'])&& ($_GET['id_sp']>0)){
-                if (!isset($_SESSION['cart'])) {
-                    $_SESSION['cart'] = [];
-                }
-                if(isset($_POST['add-cart'])){
-                        if (count($_SESSION['cart'])==0){
-                            $cartmini = ['img' => $_POST['img'], 'nameProduct' => $_POST['nameProduct'], 'price' => $_POST['price'], 'quantity' => 1, 'total' => $_POST['price'],'idsp' => $_GET['id_sp']];
-                            $_SESSION['cart'][] = $cartmini;
-                        }else{
-                            $check = 0;
-                            for ($i = 0; $i < count($_SESSION['cart']); $i++) {
-                                $item = $_SESSION['cart'][$i];
-                                if ($_GET['id_sp'] == $item['idsp']) {
-                                    $_SESSION['cart'][$i]['quantity'] = $item['quantity'] + 1;
-                                    $_SESSION['cart'][$i]['total'] = $_SESSION['cart'][$i]['quantity']*$item['price'];
-                                    $check = 1;
-                                    break;
-                                }
-                            }
-                            if ($check == 0) {
-                            $cartmini = ['img' => $_POST['img'], 'nameProduct' => $_POST['nameProduct'], 'price' => $_POST['price'], 'quantity' => 1, 'total' => $_POST['price'],'idsp' => $_GET['id_sp']];
-                            $_SESSION['cart'][] = $cartmini;
-                            }
-                        }
-                        echo"<script>alert('Đã thêm vào giỏ hàng')</script>";
-                    }
-                
-
                 $trangCT=trangCT($_GET['id_sp']);
                 extract($trangCT);
                 $spct=load_spct($id_sanpham, $id_dm);
 
                 include("view/user/trangchitiet.php");
-            }else{
-            include("view/user/home.php");
-
-            }
                 break;
-                case "listCart":
+
+
+
+                case "giohang":
                     // Kiểm tra xem giỏ hàng có dữ liệu hay không
-                    if (!isset($_SESSION['cart'])) {
-                        $_SESSION['cart']=[];
+                    // if (!isset($_SESSION['cart'])) {
+                    //     $_SESSION['cart']=[];
+                    // }
+                    echo "<pre>";
+                    // var_dump($_POST);
+                    // var_dump($_GET);
+                    // var_dump($_SESSION);
+                    if (isset($_POST["add-cart"])) {
+                        if ($_SESSION['sdt']) {
+                            $id_u = load_taikhoan($_SESSION['sdt']);
+                            $id_user = $id_u['id_khachhang'];
+                        }
+                        $id_pro = $_POST['idsp'];
+                        insert_giohang($id_user,$id_pro);
                     }
-                    include "view/user/listCartOrder.php";
+                    if (isset($_GET["act"])) {
+                        $act = $_GET["act"];
+                        $id = $_GET["id"];
+                        change_quantity($act,$id);
+                    }
+                    $pro = loadall_sanpham_giohang();
+                    // var_dump($pro);
+                    include "view/user/giohang.php";
                     break;
+
+        case 'donhang':
+            // echo "<pre>";
+            // var_dump($_POST);
+            if (isset($_POST['checkout'])) {
+                $id_pro = $_POST['id_pro'];
+                $id_user = $_POST['id_user'];
+                $total_payment = $_POST['total_payment'];
+                $quantity = $_POST['quantity'];
+                $total_price = $_POST['total_price'];
+                $status= $_POST['status'];
+                if ($id_pro != '') {
+                    insert_donhangg($id_user,$id_pro,$total_payment,$quantity,$total_price,$status);
+                } else {
+                    header('location: index.php?type=giohang');
+                }
+              }
+            $dh = loadall_donhangg($id_user);
+            // echo "<pre>";
+            // var_dump($dh);
+            include "view/user/donhang.php";        
+            break;
+
+
         case 'trangbaohanh':
             include("view/user/trangbaohanh.php");
             break;

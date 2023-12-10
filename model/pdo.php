@@ -5,7 +5,7 @@
 define('DBHOST', 'localhost');
     define('DBUSER', 'root');
     define('DBPASS', '');
-    define('DBNAME', 'da11');
+    define('DBNAME', 'da1');
 function pdo_get_connection(){
     $conn = new PDO('mysql:host='.DBHOST.';dbname='.DBNAME,DBUSER,DBPASS);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -145,31 +145,32 @@
                         case 'dsdonhang':
                             
                             $loadAll_dh=loadall_donhang();
-                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                // Kiểm tra xem có dữ liệu từ form không
-                                if(isset($_POST['status']) && is_array($_POST['status'])) {
-                                    $newStatusArray = $_POST['status'];
+                            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                if (isset($_POST['status']) && is_array($_POST['status'])) {
+                                    try {
+                                        $conn = pdo_get_connection();
+                                        $conn->beginTransaction();
                             
-                                    // Dùng vòng lặp để cập nhật trạng thái từ mảng $_POST
-                                    foreach ($newStatusArray as $index => $newStatus) {
-                                        // Lấy ID đơn hàng từ dữ liệu đơn hàng đã hiển thị
-                                        $orderId = $loadAll_dh[$index]['id_od'];
+                                        $updateQuery = "UPDATE detail_orders SET status = :status WHERE id_od = :orderId";
+                                        $stmt = $conn->prepare($updateQuery);
                             
-                                        // Thực hiện câu lệnh UPDATE để cập nhật trạng thái
-                                        $updateQuery = "UPDATE detail_orders SET status = '$newStatus' WHERE id_od = $orderId";
+                                        foreach ($_POST['status'] as $orderId => $status) {
+                                            $stmt->bindParam(":orderId", $orderId, PDO::PARAM_INT);
+                                            $stmt->bindParam(":status", $status, PDO::PARAM_STR);
+                                            $stmt->execute();
+                                        }
                             
-                                        // Thực hiện câu lệnh UPDATE (thực hiện kiểm tra lỗi trong ứng dụng thực tế)
-                                        // Đối với MySQLi
-                                        // $mysqli->query($updateQuery);
-                                        
-                                        // Đối với PDO
-                                        $rs=pdo_query_one($updateQuery);
-                                        return $rs;
+                                        $conn->commit();
+                            
+                                        // Điều hướng sau khi cập nhật
+                                        header("Location: index.php?act=dsdonhang");
+                                        exit(); // Đảm bảo không có mã HTML hoặc mã PHP tiếp theo được thực hiện sau khi điều hướng
+                                    } catch (PDOException $e) {
+                                        $conn->rollBack();
+                                        echo "Error: " . $e->getMessage();
+                                    } finally {
+                                        unset($conn);
                                     }
-                            
-                                    // Sau khi cập nhật, bạn có thể chuyển hướng người dùng đến trang khác
-                                    header("Location: index.php?act=dsdonhang");
-                                    exit();
                                 }
                             }
                             include "quanlydonhang/list.php";

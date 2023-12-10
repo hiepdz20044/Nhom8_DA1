@@ -10,4 +10,9 @@
         $sql="INSERT INTO donhang_chitiet(id_donhang,id_sanpham,so_luong,tong_don) VALUES($id_donhang,$id_sanpham,$so_luong,$tong_don)";
         return pdo_execute($sql);
     }
+    function capNhatDh($id_od){
+        $sql="UPDATE detail_orders SET status = 'Hủy' WHERE id_od = $id_od";
+        return pdo_execute($sql);
+    }
+
 ?>

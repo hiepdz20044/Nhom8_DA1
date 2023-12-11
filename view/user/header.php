@@ -15,7 +15,7 @@
     <div class="container-fluid header">
         <div class="container d-flex justify-content-between">
             <div class="img">
-                <img src="view/user/asset/image/logo.jpg" class="logo" alt="">
+                <img src="./upload/logo.jpg" class="logo" alt="">
             </div>
             <div class="d-flex align-items-center justify-content-between chiu">
                 <!-- <div class="search">

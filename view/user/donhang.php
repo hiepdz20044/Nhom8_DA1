@@ -61,8 +61,8 @@
                 <p>Số điện thoại: <?php echo $name['sdt'] ?> <span> Địa chỉ: <?php echo $name['dia_chi'] ?></span>
                 </p>
             </div>
-            <form action="index.php?act=capnhatdh" method="post">
-                <p>Trạng thái đơn hàng: <span>
+            <form action="" method="post" enctype="multipart/form-data">
+                <p>Trạng thái đơn hàng:<span>
                         <?php 
                     if ($keyy['status']=='') {
                         echo "Đang chờ xử lí";

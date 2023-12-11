@@ -1,7 +1,7 @@
 
     <div class="banneranh">
-        <img class="slide" src="view/user/asset/image/banner1.jpg" alt="Image 1">
-        <img class="slide" src="view/user/asset/image/banner2.jpg" alt="Image 2">
+        <img class="slide" src="./upload/banner1.jpg" alt="Image 1">
+        <img class="slide" src="./upload/banner2.jpg" alt="Image 2">
       </div>
 
     <div id="bannerchu">
@@ -21,7 +21,7 @@
                 foreach ($loadall_daydh as $key) {
                     echo '
                     <div class="col-2 ">
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="100%" alt="Ảnh sản phẩm"
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="./upload/'.$key['img'].'" width="100%" alt="Ảnh sản phẩm"
                        >
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'">

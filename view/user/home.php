@@ -1,6 +1,6 @@
     <div class="banneranh">
-        <img class="slide" src="view/user/asset/image/banner1.jpg" alt="Image 1">
-        <img class="slide" src="view/user/asset/image/banner2.jpg" alt="Image 2">
+        <img class="slide" src="./upload/banner1.jpg" alt="Image 1">
+        <img class="slide" src="./upload/banner2.jpg" alt="Image 2">
     </div>
 
     <div id="bannerchu">
@@ -13,23 +13,23 @@
 
         <div class="image-container1">
 
-            <a href="#"><img class="image" src="view/user/asset/image/tintuc1.jpg" alt="Image 1"></a>
-            <a href="#"><img class="image" src="view/user/asset/image/tintuc2.jpg" alt="Image 2"></a>
+            <a href="#"><img class="image" src="./upload/tintuc1.jpg" alt="Image 1"></a>
+            <a href="#"><img class="image" src="./upload/tintuc2.jpg" alt="Image 2"></a>
         </div>
 
         <div class="image-container2">
 
-            <a href="#"><img class="image" src="view/user/asset/image/thuonghieu1.jpg" alt="Image 3"></a>
-            <a href="#"><img class="image" src="view/user/asset/image/thuonghieu1.jpg" alt="Image 4"></a>
-            <a href="#"><img class="image" src="view/user/asset/image/thuonghieu1.jpg" alt="Image 5"></a>
-            <a href="#"><img class="image" src="view/user/asset/image/thuonghieu1.jpg" alt="Image 6"></a>
-            <a href="#"><img class="image" src="view/user/asset/image/thuonghieu1.jpg" alt="Image 7"></a>
+            <a href="#"><img class="image" src="./upload/thuonghieu1.jpg" alt="Image 3"></a>
+            <a href="#"><img class="image" src="./upload/thuonghieu1.jpg" alt="Image 4"></a>
+            <a href="#"><img class="image" src="./upload/thuonghieu1.jpg" alt="Image 5"></a>
+            <a href="#"><img class="image" src="./upload/thuonghieu1.jpg" alt="Image 6"></a>
+            <a href="#"><img class="image" src="./upload/thuonghieu1.jpg" alt="Image 7"></a>
         </div>
     </div>
 
 
     <div id="bannerduoi">
-        <img id="currentImagee" src="view/user/asset/image/bannerduoi1.jpg" alt="Image 1">
+        <img id="currentImagee" src="./upload/bannerduoi1.jpg" alt="Image 1">
     </div>
     <div class="thumbnail-container">
         <button onclick="previousImage()">&#8249;</button>
@@ -50,7 +50,7 @@
             foreach ($loadall_sanpham_hot as $key) {
                 echo '
                 <div class="col-2 ">
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="100%" >
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="./upload/'.$key['img'].'" width="100%" >
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
                 <p class="small text-center">'.$key['loai_may'].'</p>
@@ -69,7 +69,7 @@
             foreach ($loadall_sanpham_moi as $key) {
                 echo '
                 <div class="col-2 ">
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="100%" >
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="./upload/'.$key['img'].'" width="100%" >
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
                 <p class="small text-center">'.$key['loai_may'].'</p>

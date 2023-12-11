@@ -73,7 +73,7 @@
                     echo '
                     <div class="col-md-4 mb-4">
                     <div class="card">
-                        <a href="#"><img class="card-img-top" src="view/user/asset/image/'.$item['img'].'" width="100%" alt="Ảnh sản phẩm" >
+                        <a href="#"><img class="card-img-top" src="./upload/'.$item['img'].'" width="100%" alt="Ảnh sản phẩm" >
                         <div class="card-body">
                             <a href="#"><h5  class="text-hover m-1">'.$item['nameProduct'].'</h5></a>
                             <p class="small text-center " >AUTOMATIC</p>

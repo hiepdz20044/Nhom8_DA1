@@ -14,5 +14,4 @@
         $sql="UPDATE detail_orders SET status = 'Hủy' WHERE id_od = $id_od";
         return pdo_execute($sql);
     }
-
 ?>

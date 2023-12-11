@@ -4,7 +4,7 @@
             <?php  
             $img=$img_path.$img;
             echo '
-                <img  class="product-image" src="view/user/asset/image/'.$trangCT['img'].'" alt="Product Image" style="height: 501px;"> ';?>
+                <img  class="product-image" src="./upload/'.$trangCT['img'].'" alt="Product Image" style="height: 501px;"> ';?>
             <button class="btn btn-primary xem" onclick="openModal()"><i class="fa-solid fa-list fa-lg"
                     style="color: #000000;"></i></button>
             <button class="btn btn-primary xem2" data-toggle="modal" data-target="#imageModal"><i
@@ -531,7 +531,7 @@
               foreach ($spct as $key) {
                 echo '
                 <div class="col-2 ">
-                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="view/user/asset/image/'.$key['img'].'" width="160" height="200" alt="Ảnh sản phẩm">
+                <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><img src="./upload/'.$key['img'].'" width="160" height="200" alt="Ảnh sản phẩm">
                 </a>
                 <a href="index.php?type=trangchitiet&id_sp='.$key['id_sanpham'].'"><p  class="text-center m-1">'.$key['ten_sp'].'</p></a>
                 <p class="small text-center">AUTOMATIC</p>

@@ -122,17 +122,12 @@ if (isset($_GET["type"])){
             $dh = loadall_donhangg($id_user);
             // echo "<pre>";
             // var_dump($dh);
+            if (isset($_POST['cancelOrderButton'])&&($_POST['cancelOrderButton'])){
+                $id_od=$_POST['id'];
+                capNhatDh($id_od);
+            }
             include "view/user/donhang.php";        
             break;
-        case 'capnhatdh':
-            if (isset($_POST['cancelOrderButton'])&&($_POST['cancelOrderButton'])){
-                $id_od=$_POST['tenloai'];
-                updatedm_danhmuc($id_dm,$tenloai);
-            }
-            include "view/user/donhang.php";
-            break;    
-
-
         case 'trangbaohanh':
             include("view/user/trangbaohanh.php");
             break;

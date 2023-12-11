@@ -89,14 +89,14 @@
             if ($key['id_thuonghieu']>4) { ?>
         <div class="col-md-3" style="display: none;">
             <a href="index.php?type=trangspthuonghieu&idth=<?php echo $key['id_thuonghieu']?>"><img
-                    src="view/user/asset/image/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
+                    src="./upload/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
                     class="img-fluid mb-2" /></a>
             <p class="text-center"><?php echo $key['name']?></p>
         </div>
         <?php } else{ ?>
         <div class="col-md-3">
             <a href="index.php?type=trangspthuonghieu&idth=<?php echo $key['id_thuonghieu']?>"><img
-                    src="view/user/asset/image/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
+                    src="./upload/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
                     class="img-fluid mb-2" /></a>
             <p class="text-center"><?php echo $key['name']?></p>
         </div>
@@ -127,7 +127,7 @@
             foreach ($list_th as $key) { ?>
         <div class="col-md-3 mb-4">
             <a href="index.php?type=trangspthuonghieu&idth=<?php echo $key['id_thuonghieu']?>"><img
-                    src="view/user/asset/image/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
+                    src="./upload/<?php echo $key['img_logo']?>" alt="<?php echo $key['name']?>"
                     class="img-fluid mb-2" /></a>
             <p class="text-center"><?php echo $key['name']?></p>
         </div>

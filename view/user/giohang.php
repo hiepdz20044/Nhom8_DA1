@@ -34,7 +34,7 @@
           ?>
             <div class="row mb-3">
                 <div class="col-md-3">
-                    <a href="chitietsanpham.html"><img src="./upload/<?php echo $key['img'] ?>" alt="Sản phẩm 1"
+                    <a href="index.php?act=trangchitiet"><img src="./upload/<?php echo $key['img'] ?>" alt="Sản phẩm 1"
                             class="product-image"></a>
                 </div>
                 <div class="col-md-3"><?php echo $key['ten_sp'] ?></div>

@@ -35,7 +35,7 @@
 
             <div class="card">
                 <a href="index.php?type=trangchitiet&id_sp=<?php echo $key['id_sanpham'] ?>"><img
-                        src="view/user/asset/image/<?php echo $key['img'] ?>" width="100%"></a>
+                        src="./upload/<?php echo $key['img'] ?>" width="100%"></a>
                 <a href="index.php?type=trangchitiet&id_sp=<?php echo $key['id_sanpham']?>">
                     <p class="text-center m-1"><?php echo $key['ten_sp']?></p>
                 </a>
